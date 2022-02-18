@@ -2,14 +2,20 @@
 Quotes for WAFS
 
 # Week 1
-In week 1 I choice my final project: Control panels. I went for the control panels because I'm not really that good in CSS yet and wanted to start off with something that i could develop myself in more easilely, because there are so many options of control panels it seemed perfect.
+In week 1 I choice my final project: Quotes. I went for Quotes because I'm a beginnner in Javascript. 
+I did have experience in  XMLHttpRequest. So i choice that for getting data out of the API.
 
-I started off with a sketch of how i wanted it to look like and some features i knew how to make, then i turned the sketch in to a breakdown sketch, devining all the assets into HTML elements and a bit of styling. 
+I started of with a design in XD containing:
+- Zero state
+- Ideal state
+- Loading state
+- Error state
 
-< here comes image of the sketch > 
+The design of the ideal state I copied and turned into a breakdown sketch to deving al the HTML elements.
+Then I went on on the creating these elements in my html, write some base css, and then starting early with my JS.
+Because I in my JS im creating a lot of HTML elements i only use html for the header and the Root. 
 
-Then after sketching I made my html, and css. 
-So far the design excist out of the temperature ruler, some option radio buttons and a slider with a gradient feedback telling the user not only with degrees but also with colors from blue (cold) to red (warm).
+Then by then end of the week I was left with my design, working JS loading in my API, making the elements responsive and even adding a extra options of generating a random quote.
 
 ![Design so far week 1](./assets/design-week1.jpg)
 ![Design so far week 1](./assets/design-week1(2).jpg)
