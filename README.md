@@ -11,5 +11,6 @@ I started off with a sketch of how i wanted it to look like and some features i 
 Then after sketching I made my html, and css. 
 So far the design excist out of the temperature ruler, some option radio buttons and a slider with a gradient feedback telling the user not only with degrees but also with colors from blue (cold) to red (warm).
 
-![Design so far week 1](./assets/CSS-Week1.jpg)
+![Design so far week 1](./assets/design-week1.jpg)
+![Design so far week 1](./assets/design-week1(2).jpg)
 
