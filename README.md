@@ -6,6 +6,7 @@ In week 1 I choice my final project: Quotes. I went for Quotes because I'm a beg
 I did have experience in  XMLHttpRequest. So i choice that for getting data out of the API.
 
 I started of with a design in XD containing:
+https://xd.adobe.com/view/e0722e78-27ed-415c-a5e9-f74abe4743fe-b521/
 - Zero state
 - Ideal state
 - Loading state
