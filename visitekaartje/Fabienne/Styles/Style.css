@@ -1,0 +1,160 @@
+/* OPMAAK VAN DE BODY & TOEGANKELIJKHEID */
+body {
+    font-family: roboto, sans-serif;
+    overflow-x: hidden;
+    color: #C7C4A9;
+    background: #cfd8dc;
+}
+
+@font-face {
+    font-family: Stylequeen;
+    src: url(font/StyleQueens.ttf);
+}
+
+a {
+    cursor: pointer;
+    color: #C7C4A9;
+    text-decoration: none;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b9b9b9;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 150px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+main {
+    background-color: #202020;
+    background-size: cover;
+    Height: 265px; 
+    width: 454px;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+main .front img:nth-of-type(1) {
+    Height: 265px; 
+    width: 454px;
+    position: absolute;
+    backface-visibility: hidden;
+    z-index: 1;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.overlay {
+    position: absolute;
+    Height: 265px; 
+    width: 454px;
+    z-index: 5;
+    background-color: #000000; 
+    opacity: 0.3;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .front img:nth-of-type(2) {
+    width: 120px;
+    height: 100px;
+    z-index: 20;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+}
+
+main .front {
+    /* display: none  */
+}
+
+main .back img{
+    Height: 265px; 
+    position: relative;
+    left: 340px;
+    top: 0px;
+    z-index: 0;
+}
+
+.back {
+    position: relative;
+    left: 20px;
+}
+
+h1 {
+    position: relative;
+    font-family: Stylequeen;
+    width: 300px;
+    top: -270px;
+}
+
+h2 {
+    position: relative;
+    font-family: Roboto;
+    font-size: 14px;
+    top: -270px;
+    font-weight: 100;
+}
+
+.back ul {
+    list-style-type:none;
+    display:flex;
+    flex-direction: row;
+    margin-left: -60px;
+    margin-top: -245px;
+}
+
+.back ul li {
+    background-color: #c7c4a952;
+    padding: 20px;
+    padding-right: 50px;
+    
+
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1%;
+    height: 1%;
+    border-radius: 50%;
+    background: #3c26b9;
+    transition: .5s;
+    transform: scale(.3);
+    z-index: -1;
+  }
+  
+  ul li a:hover::before {
+    transform: scale(1.1);
+  }
+  
+  ul li a:hover {
+    color: #3c26b9;
+    text-shadow: 0 0 5px #3c26b9;
+  }
+
+
+
+
+ 
+  
