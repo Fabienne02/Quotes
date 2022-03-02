@@ -10,10 +10,7 @@ A web-app that let's you browse through inspiring quotes.
   - [About](#about)
   - [Features](#features)
   - [Documentation](#documentation)
-  - [Installing](#installing)
   - [Author](#author)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## About
 **Quotes is een webapp waar je geinspireerd kan worden door design quotes!**
