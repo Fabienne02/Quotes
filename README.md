@@ -3,9 +3,7 @@ Quotes for WAFS
 
 A web-app that let's you browse through inspiring quotes.
 
-![Desgin so far week 1](./assets/quotes.png)
-
-# <img src="content/banner.jpg" width="100%" alt="banner">
+# <img src="./assets/quotes.png" width="100%" alt="banner">
 
 ## Table of contents
   - [Table of contents](#table-of-contents)
@@ -29,7 +27,7 @@ Quotes maakt gebruik van een api: https://quote.api.fdnd.nl/v1/quote
 </ul>
 
 ## Documentation
-[wiki](https://github.com/Fabienne02/Quotes/wiki) 
+Lees hier mijn documentatie per week [wiki](https://github.com/Fabienne02/Quotes/wiki) 
 
 ## Author
 De maker van deze app is: [*Fabienne van den Steen*](https://github.com/Fabienne02)
