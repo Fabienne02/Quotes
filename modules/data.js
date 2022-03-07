@@ -6,6 +6,8 @@ import { ShowError } from "./getData.js";
 import { renderGetData } from "./renderData.js";
 import { renderDataShow } from "./renderData.js";
 
+import { highlighted } from "./renderData.js";
+
   //dubbele error getdata
   import { error } from "./getData.js";
 

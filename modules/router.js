@@ -22,7 +22,7 @@ export function handleRoutes() {
       '': () => {
         XMLHttpsRequest ()
         then 
-        getdata ()
+getdata ()
         location.hash = "#Home";
        }
         },
