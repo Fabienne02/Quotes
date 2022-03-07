@@ -23,7 +23,7 @@ export function handleRoutes() {
         XMLHttpsRequest ()
         then 
         getdata ()
-        updateUI('home')
+        location.hash = "#Home";
        }
         },
         'Random': () => {
@@ -32,12 +32,12 @@ export function handleRoutes() {
             hideLoading ()
             show ()
 
-            updateUI(`${quote.name}`)
+            location.hash = `#${quote.name}`;
         },
         'focus': () => {
             highlighted ()
 
-         updateUI(`${quote.name}`)
+            location.hash = `#${quote.name}`;
             // renderProductData()
         }
 

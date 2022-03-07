@@ -14,3 +14,6 @@ function displayLoading() {
 function hideLoading() {
     loader.classList.remove("display");
 }
+
+export { displayLoading }
+export { hideLoading }
