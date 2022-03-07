@@ -1,6 +1,12 @@
+import {  XMLHttpsRequest } from "./Getdata.js";
+const url = 'https://quote.api.fdnd.nl/v1/quote'
+  const data = await fetch(url)
+ const response = await data.json()
+const quote = response.data
+
 // Getdata if
 function renderGetData () {
-const quote = request.response.data
+
 
   quote.forEach(quote => {
     const figure = document.createElement('figure')
@@ -27,7 +33,7 @@ console.log("wie ben ik? ", quote)
       focus.textContent = `#`
       let statusquote = false
 
-focus.onclick = function highlighted(){
+function highlighted(){
     if ( statusquote == false) {
     figure.classList.add("highlight")
     figure.id = `${quote.name}`
@@ -47,6 +53,8 @@ focus.onclick = function highlighted(){
     statusquote = false
   }
   }
+
+ focus.addEventListener('click', highlighted)
 
 // Show if
   function renderDataShow () {

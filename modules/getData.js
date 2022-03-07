@@ -1,11 +1,14 @@
-// XMLHttpsRequest 
-function XMLHttpsRequest () { 
-    const request = new XMLHttpRequest()
-    request.open('GET', 'https://quote.api.fdnd.nl/v1/quote', true)
-    request.responseType = "json";
+const url = 'https://quote.api.fdnd.nl/v1/quote'
+  const data = await fetch(url)
+ const response = await data.json()
+     
+export async function XMLHttpsRequest(){
+    console.log(response)
+   } 
+  
+   const app = document.getElementById('root')
 
-    
-}
+
 
 // Getdata else
 function GetdataError () {
@@ -34,7 +37,8 @@ function ShowError () {
 }
 
 // dubbele error op getdata
-request.onerror = function error() {
+function error() {
+  if (response.status <= 200 && response.status > 400)
     console.log("ERROR")
   
     const errorMessage = document.createElement('marquee')
@@ -47,4 +51,3 @@ request.onerror = function error() {
   export { GetdataError }
   export { ShowError }
   export { error }
-  export { XMLHttpsRequest }

@@ -11,10 +11,14 @@ import { highlighted } from "./renderData.js";
   //dubbele error getdata
   import { error } from "./getData.js";
 
+  import {  XMLHttpsRequest } from "./Getdata.js";
+const url = 'https://quote.api.fdnd.nl/v1/quote'
+  const data = await fetch(url)
+ const response = await data.json()
+const quote = response.data
 
-request.onload = function getdata() {
-    const quote = request.response.data
-    if (request.status >= 200 && request.status < 400) {
+export function getdata() {
+    if (response.status >= 200 && response.status < 400) {
   
         renderGetData ()
         
@@ -26,9 +30,12 @@ request.onload = function getdata() {
     }
   }
 
-  error ()
+  //error ()
 
-  request.send()
+
+window.addEventListener('load', getdata)
+
+ 
 
 
 
