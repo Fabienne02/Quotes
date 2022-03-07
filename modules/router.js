@@ -43,4 +43,5 @@ export function handleRoutes() {
 
 }
 
-// waar laat is send request ?
+// waar laat je send request ?
+// kan de oproeping api niet boven aan ipv voor elke #

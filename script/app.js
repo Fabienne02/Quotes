@@ -53,8 +53,6 @@ request.onload = function getdata() {
         figure.removeAttribute("id")
         figure.classList.remove("highlight")
         document.querySelector("body").style.overflowY = "scroll"
-        //focus.setAttribute("href", '');
-        // focus.removeAttribute("href");
         window.location.hash = "Home"
       }
       }

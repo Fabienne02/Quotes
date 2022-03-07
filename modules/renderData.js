@@ -73,3 +73,4 @@ focus.onclick = function highlighted(){
 
   export { renderGetData }
   export { renderDataShow }
+  export { highlighted }

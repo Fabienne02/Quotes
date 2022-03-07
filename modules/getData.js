@@ -46,3 +46,5 @@ request.onerror = function error() {
 
   export { GetdataError }
   export { ShowError }
+  export { error }
+  export { XMLHttpsRequest }
