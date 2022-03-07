@@ -17,13 +17,17 @@ const url = 'https://quote.api.fdnd.nl/v1/quote'
  const response = await data.json()
 const quote = response.data
 
+const statusapi = false
+
 export function getdata() {
-    if (response.status >= 200 && response.status < 400) {
+    if (statusapi == false) {
   
         renderGetData ()
         
   
         highlighted()
+
+        // statusapi = true
   
     } else {
         GetdataError ()

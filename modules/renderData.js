@@ -4,6 +4,8 @@ const url = 'https://quote.api.fdnd.nl/v1/quote'
  const response = await data.json()
 const quote = response.data
 
+const app = document.getElementById('root')
+
 // Getdata if
 function renderGetData () {
 
@@ -27,22 +29,27 @@ function renderGetData () {
   } )
 }
 
+
+
 // Highlighted ()
 console.log("wie ben ik? ", quote)
       const focus = document.createElement('a')
       focus.textContent = `#`
       let statusquote = false
+      const figure = document.getElementsByClassName("figure")
 
 function highlighted(){
     if ( statusquote == false) {
+      quote.forEach(quote => {
     figure.classList.add("highlight")
     figure.id = `${quote.name}`
     document.querySelector("body").style.overflowY = "hidden"
 
-    window.location.hash = `${quote.name}`;
+    window.location.hash = "hi";
     console.log(window.location.hash)
 
     statusquote = true
+  })
     
   } else if ( statusquote == true ) {
     console.log("werkt")
