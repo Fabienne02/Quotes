@@ -20,17 +20,17 @@ export function handleRoutes() {
     routie(
       {
       '': () => {
-        XMLHttpsRequest ()
-        then 
-getdata ()
+        XMLHttpsRequest().then 
+        getdata().then
+        request.send()
         location.hash = "#Home";
        }
         },
         'Random': () => {
-            XMLHttpsRequest ()
-            displayLoading ()
-            hideLoading ()
-            show ()
+            XMLHttpsRequest().then
+            displayLoading().then
+            hideLoading().then
+            show()
 
             location.hash = `#${quote.name}`;
         },
