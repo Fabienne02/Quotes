@@ -1,11 +1,11 @@
 // To do:
-// - autheur apart - done
-// - zero/laad state erin - done
-// - error beter uitwerken - done
-// - div eruit - done
+// - laad state erin bij quotes - net werk op traag om te testen 
 // - Modules 
 // - hash routes voor de focus state = als hash dit is moet er iets gebeuren
 // - JS opschonen = console log eruit
+// - read me compleet maken en laatste week wiki
+// https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/week-4.md
+// - flow control update en in readme
 
 
 const app = document.getElementById('root')
@@ -34,20 +34,21 @@ request.onload = function getdata() {
       console.log("wie ben ik? ", quote)
       const focus = document.createElement('a')
       // focus.setAttribute("href", `#${quote.name}`);
-      window.location.hash = "Home";
+      // window.location.hash = "Home";
+      location.hash = '#Home'
       focus.textContent = `#`
       // let statusquote = false
       
 
       focus.onclick = function highlighted(){
-        if ( window.location.hash = "Home" ) {
+        if ( location.hash === '#Home' ) {
         figure.classList.add("highlight")
         figure.id = `${quote.name}`
         document.querySelector("body").style.overflowY = "hidden"
 
-        window.location.hash = `${quote.name}`;
+        location.hash = `#${quote.name}`;
         console.log(window.location.hash)
-      } else if ( window.location.hash = `${quote.name}`) {
+      } else {
         console.log("werkt")
         figure.removeAttribute("id")
         figure.classList.remove("highlight")
