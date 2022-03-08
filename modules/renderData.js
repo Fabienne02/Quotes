@@ -1,18 +1,12 @@
-import {  XMLHttpsRequest } from "./Getdata.js";
-const url = 'https://quote.api.fdnd.nl/v1/quote'
-  const data = await fetch(url)
- const response = await data.json()
-const quote = response.data
+
 
 const app = document.getElementById('root')
 
 // Getdata if
 // request.onload =
-function renderGetData() {
+function renderGetData(quotes) {
   // Begin accessing JSON data here
-  if (data.status >= 200 && data.status < 400) {
-
-    quote.forEach(quote => {
+    quotes.data.forEach(quote => {
       const figure = document.createElement('figure')
       figure.setAttribute('class', 'figure')
 
@@ -23,7 +17,7 @@ function renderGetData() {
       quote.name = quote.name.substring(0, 300)
       cite.textContent = `${quote.name}`
 
-      console.log("wie ben ik? ", quote)
+      // console.log("wie ben ik? ", quote)
       const focus = document.createElement('a')
       focus.setAttribute("href", `#${quote.name}`);
       focus.textContent = `#`
@@ -52,27 +46,21 @@ function renderGetData() {
 
     } )
 
-  } }
+   }
 
-   const button = document.querySelectorAll(".bottom")
-   const inDruk = document.querySelector(".bottom")
+
    const blockquote = document.createElement('blockquote')
-  const cite = document.createElement('cite')
-  
+   const cite = document.createElement('cite')
    const day = document.getElementById('day')
   
 
-//   button.forEach((inDruk) => {
-//     inDruk.addEventListener("click", renderDataShow)
-// });
-
 // Show if
-  function renderDataShow () {
-       
-    console.log(quote[Math.floor(Math.random() * quote.length)].text)
+  export function renderRandomQuote(quote) {
+       const quotes = quote.data
 
 
-    const randomQuote = quote[Math.floor(Math.random() * quote.length)]
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    window.location.hash = `#${randomQuote.name}`
     console.log(randomQuote)
     blockquote.textContent = `${randomQuote.text}`
     cite.textContent = `${randomQuote.name}`
@@ -83,5 +71,3 @@ function renderGetData() {
   }
 
   export { renderGetData }
-  export { renderDataShow }
-  // export { highlighted }

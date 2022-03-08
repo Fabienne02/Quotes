@@ -1,49 +1,31 @@
-// import getdata if & else
-// import show if & else
-import { getdata } from "./data.js";
-//import { show } from "./data.js";
-
-//highlighted
-//import { highlighted } from "./renderData.js";
-
-// import loading functions
-//import { displayLoading} from "./loading.js";
-//import { hideLoading } from "./loading.js";
-
-
-// import xmlhttpsrequest
-import { XMLHttpsRequest } from "./Getdata.js";
 
 import '../script/vendor/routie.js'
+import { getData } from "./Getdata.js";
+import { displayLoading, hideLoading, showError } from './states.js';
+import { renderGetData, renderRandomQuote } from "./renderData.js";
+
 
 export function handleRoutes() {
     routie(
       {
       '': () => {
-        XMLHttpsRequest().then 
-        getdata()
-        //.then
-        
-        location.hash = "#Home"
+        displayLoading()
+        getData()
+        .then(response => {
+          renderGetData(response)
+          hideLoading()
+        }).catch(error => showError(error))
+        },
+        'random': () => {
+          displayLoading()
+          getData()
+          .then(response => {
+            renderRandomQuote(response)
+            renderGetData(response)
+            hideLoading()
+          })
         }
-    // ,
-    //     'Random': () => {
-    //         XMLHttpsRequest().then
-    //         displayLoading().then
-    //         hideLoading().then
-    //         show()
 
-    //         location.hash = `#${quote.name}`;
-    //     },
-    //     'focus': () => {
-    //         highlighted ()
-
-    //         location.hash = `#${quote.name}`;
-    //         // renderProductData()
-    //     }
 
     }) 
-
-// waar laat je send request ?
-// kan de oproeping api niet boven aan ipv voor elke 
 }
