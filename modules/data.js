@@ -5,51 +5,60 @@ import { GetdataError } from "./getData.js";
 import { ShowError } from "./getData.js";
 import { renderGetData } from "./renderData.js";
 import { renderDataShow } from "./renderData.js";
+import { displayLoading } from "./loading.js";
 
-import { highlighted } from "./renderData.js";
+
+// import { highlighted } from "./renderData.js";
 
   //dubbele error getdata
   import { error } from "./getData.js";
 
   import {  XMLHttpsRequest } from "./Getdata.js";
-const url = 'https://quote.api.fdnd.nl/v1/quote'
+const url = 'https://quote.api.fdnd.nl/v1/quot'
   const data = await fetch(url)
  const response = await data.json()
 const quote = response.data
 
-const statusapi = false
 
 export function getdata() {
-    if (statusapi == false) {
-  
+    if (data.status >= 200 && data.status < 400) {
+  console.log("i work")
         renderGetData ()
-        
   
-        highlighted()
-
-        // statusapi = true
-  
-    } else {
+    } else{
+      console.log("i work too")
         GetdataError ()
     }
   }
 
-  //error ()
 
-
-window.addEventListener('load', getdata)
-
+// error() 
+// response.on('error', function(error){
+//   console.log("error")
+// })
  
+const button = document.querySelectorAll(".bottom")
+const inDruk = document.querySelector(".bottom")
 
+const day = document.getElementById('day')
+
+
+button.forEach((inDruk) => {
+    inDruk.addEventListener("click", show)
+});
 
 
   function show() {
-    if (request.status >= 200 && request.status < 400) {
+    if (data.status >= 200 && data.status < 400) {
+      // displayLoading()
+      console.log("hi")
          renderDataShow ()
 
     } else  {
-        ShowError ()
+      console.log ("hi error)")
+        ShowError()
     }
     
 
 }
+

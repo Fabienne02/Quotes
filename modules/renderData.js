@@ -7,70 +7,72 @@ const quote = response.data
 const app = document.getElementById('root')
 
 // Getdata if
-function renderGetData () {
+// request.onload =
+function renderGetData() {
+  // Begin accessing JSON data here
+  if (data.status >= 200 && data.status < 400) {
 
+    quote.forEach(quote => {
+      const figure = document.createElement('figure')
+      figure.setAttribute('class', 'figure')
 
-  quote.forEach(quote => {
-    const figure = document.createElement('figure')
-    figure.setAttribute('class', 'figure')
+      const blockquote = document.createElement('blockquote')
+      blockquote.textContent = quote.text
 
-    const blockquote = document.createElement('blockquote')
-    blockquote.textContent = quote.text
+      const cite = document.createElement('cite')
+      quote.name = quote.name.substring(0, 300)
+      cite.textContent = `${quote.name}`
 
-    const cite = document.createElement('cite')
-    quote.name = quote.name.substring(0, 300)
-    cite.textContent = `${quote.name}`
-
-    app.appendChild(figure)
-    figure.appendChild(blockquote)
-    figure.appendChild(cite)
-    figure.appendChild(focus)
-
-  } )
-}
-
-
-
-// Highlighted ()
-console.log("wie ben ik? ", quote)
+      console.log("wie ben ik? ", quote)
       const focus = document.createElement('a')
+      focus.setAttribute("href", `#${quote.name}`);
       focus.textContent = `#`
       let statusquote = false
-      const figure = document.getElementsByClassName("figure")
+      
 
-function highlighted(){
-    if ( statusquote == false) {
-      quote.forEach(quote => {
-    figure.classList.add("highlight")
-    figure.id = `${quote.name}`
-    document.querySelector("body").style.overflowY = "hidden"
+      focus.onclick = function highlighted(){
+        if ( statusquote == false ) {
+        figure.classList.add("highlight")
+        figure.id = `${quote.name}`
+        document.querySelector("body").style.overflowY = "hidden"
 
-    window.location.hash = "hi";
-    console.log(window.location.hash)
+        statusquote = true
+      } else if ( statusquote == true)  {
+        figure.removeAttribute("id")
+        figure.classList.remove("highlight")
+        document.querySelector("body").style.overflowY = "scroll"
+        statusquote = false
+      }
+      }
 
-    statusquote = true
-  })
-    
-  } else if ( statusquote == true ) {
-    console.log("werkt")
-    figure.removeAttribute("id")
-    figure.classList.remove("highlight")
-    document.querySelector("body").style.overflowY = "scroll"
-    
-    statusquote = false
-  }
-  }
+      app.appendChild(figure)
+      figure.appendChild(blockquote)
+      figure.appendChild(cite)
+      figure.appendChild(focus)
 
- focus.addEventListener('click', highlighted)
+    } )
+
+  } }
+
+   const button = document.querySelectorAll(".bottom")
+   const inDruk = document.querySelector(".bottom")
+   const blockquote = document.createElement('blockquote')
+  const cite = document.createElement('cite')
+  
+   const day = document.getElementById('day')
+  
+
+//   button.forEach((inDruk) => {
+//     inDruk.addEventListener("click", renderDataShow)
+// });
 
 // Show if
   function renderDataShow () {
-    const quotes = request.response.data;
        
-    console.log(quotes[Math.floor(Math.random() * quotes.length)].text)
+    console.log(quote[Math.floor(Math.random() * quote.length)].text)
 
 
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    const randomQuote = quote[Math.floor(Math.random() * quote.length)]
     console.log(randomQuote)
     blockquote.textContent = `${randomQuote.text}`
     cite.textContent = `${randomQuote.name}`
@@ -78,14 +80,8 @@ function highlighted(){
 
     day.appendChild(blockquote)
     day.appendChild(cite)
-    
-    // Loading manipulation with delay
-    day.classList.remove("display");
-  setTimeout(() => {
-      day.classList.add("display");
-  }, 3000);
   }
 
   export { renderGetData }
   export { renderDataShow }
-  export { highlighted }
+  // export { highlighted }

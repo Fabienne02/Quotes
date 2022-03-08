@@ -23,7 +23,8 @@ export function handleRoutes() {
         XMLHttpsRequest().then 
         getdata()
         //.then
-        // location.hash = "#Home"
+        
+        location.hash = "#Home"
         }
     // ,
     //     'Random': () => {

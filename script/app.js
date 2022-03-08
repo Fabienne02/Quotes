@@ -14,7 +14,6 @@ const url = 'https://quote.api.fdnd.nl/v1/quote'
   const data = await fetch(url)
  const response = await data.json()
 
-// console.log(response[0].status)
 
 
 import { handleRoutes } from '../modules/router.js'

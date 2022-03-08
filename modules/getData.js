@@ -1,4 +1,4 @@
-const url = 'https://quote.api.fdnd.nl/v1/quote'
+const url = 'https://quote.api.fdnd.nl/v1/quote  '
   const data = await fetch(url)
  const response = await data.json()
      
@@ -12,20 +12,22 @@ export async function XMLHttpsRequest(){
 
 // Getdata else
 function GetdataError () {
-    const errorMessagestatus = document.createElement('marquee')
-    errorMessagestatus.textContent = `The Server is working hard! please try again later`
-    app.appendChild(errorMessagestatus)
+      const errorMessagestatus = document.createElement('marquee')
+      errorMessagestatus.textContent = `The Server is working hard! please try again later`
+      app.appendChild(errorMessagestatus)
 
-    console.log("ERROR!")
-}
+      console.log("ERROR!")
+  }
 
 // Show else
+
+
 function ShowError () {
     console.log("no quote today")
 
       const errorMessagestatusquote = document.getElementById("errorquoteoftheday")
       errorMessagestatusquote.textContent = `Looks like there is no quote today, sorry!`
-      // .appendChild(errorMessagestatusquote)
+      //.appendChild(errorMessagestatusquote)
       errorquoteoftheday.classList.remove("display");
       setTimeout(() => {
         errorquoteoftheday.classList.add("display");
@@ -38,7 +40,6 @@ function ShowError () {
 
 // dubbele error op getdata
 function error() {
-  if (response.status <= 200 && response.status > 400)
     console.log("ERROR")
   
     const errorMessage = document.createElement('marquee')

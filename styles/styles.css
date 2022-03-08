@@ -92,12 +92,8 @@ header button:hover {
 
 /* loading state */
 #day {
-  visibility: hidden;
+  /* visibility: hidden; */
   margin-bottom: 80px;
-}
-
-#day.display {
-  visibility: visible;
 }
 
 #loading {
@@ -177,7 +173,7 @@ header button:hover {
 body section:nth-of-type(1) figure.highlight {
   position: relative;
   min-width: 70%;
-  min-height: 93vh;
+  min-height: 92vh;
   font-size: 4rem;
 }
 
