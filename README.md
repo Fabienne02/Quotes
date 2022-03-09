@@ -1,12 +1,12 @@
 # Quotes 🪅
 Quotes - WAFS
 
-<img src="https://github.com/Fabienne02/Quotes/blob/main/assets/Focus quote.jpg" height=130>
+<img src="https://github.com/Fabienne02/Quotes/blob/main/assets/Focus quote.jpg" width=530 >
 
 Quotes is een web-app die je door inspireerde quotes laat scrollen.
 Pin jouw favorite quotes of laat je verassen door de random quote generator!
 
-# <img src="./assets/quotes.png" width="100%" alt="banner">
+# <img src="./assets/quotes.png" height="700" alt="banner">
 
 ## Table of contents
   - [Table of contents](#table-of-contents)
