@@ -12,6 +12,3 @@ export async function getdata(){
   
 
 
-  //  const app = document.getElementById('root')
-
-

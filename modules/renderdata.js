@@ -1,12 +1,8 @@
-
-
 const app = document.getElementById('root')
 window.location.hash = "Home"
 
-// Getdata if
-// request.onload =
+//Render quotes
 function rendergetdata(quotes) {
-  // Begin accessing JSON data here
     quotes.data.forEach(quote => {
       const figure = document.createElement('figure')
       figure.setAttribute('class', 'figure')
@@ -18,13 +14,12 @@ function rendergetdata(quotes) {
       quote.name = quote.name.substring(0, 300)
       cite.textContent = `${quote.name}`
 
-      // console.log("wie ben ik? ", quote)
       const focus = document.createElement('a')
       focus.setAttribute("href", `#${quote.name}`);
       focus.textContent = `#`
       let statusquote = false
       
-
+      //Focus on quote
       focus.onclick = function highlighted(){
         if ( statusquote == false ) {
         figure.classList.add("highlight")
@@ -50,12 +45,13 @@ function rendergetdata(quotes) {
    }
 
 
+   //Render rnadom quote
    const blockquote = document.createElement('blockquote')
    const cite = document.createElement('cite')
    const day = document.getElementById('day')
   
 
-// Show if
+
   export function renderrandomquote(quote) {
        const quotes = quote.data
 

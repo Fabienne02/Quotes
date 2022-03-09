@@ -1,5 +1,5 @@
-
 const loader = document.querySelector("#loading");
+
 //show loading state
 export function displayloading() {
     loader.classList.add("display");
