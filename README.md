@@ -1,7 +1,10 @@
 # Quotes 🪅
-Quotes for WAFS
+Quotes - WAFS
 
-A web-app that let's you browse through inspiring quotes.
+<img src="https://github.com/Fabienne02/Quotes/blob/main/assets/Focus quote.jpg" height=130>
+
+Quotes is een web-app die je door inspireerde quotes laat scrollen.
+Pin jouw favorite quotes of laat je verassen door de random quote generator!
 
 # <img src="./assets/quotes.png" width="100%" alt="banner">
 
