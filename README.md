@@ -51,7 +51,7 @@ git clone https://github.com/Fabienne02/Quotes.git
 3. Start een live port en bekijk het project in jouw browser
 
 ## Control flow
-<img src="https://github.com/Fabienne02/Quotes/blob/main/assets/control flow 2.png">
+<img src="https://github.com/Fabienne02/Quotes/blob/main/assets/control flow 3.png">
 
 ## Documentation
 Lees hier mijn documentatie per week [wiki](https://github.com/Fabienne02/Quotes/wiki)
