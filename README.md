@@ -23,6 +23,12 @@ Quotes maakt gebruik van een api: https://quote.api.fdnd.nl/v1/quote
   <li>Focus op jouw favoriete quote</li>
 </ul>
 
+## Installing
+Clone deze repository naar jouw lokale folder
+```
+git clone https://github.com/Fabienne02/Quotes.git
+```
+
 ## Documentation
 Lees hier mijn documentatie per week [wiki](https://github.com/Fabienne02/Quotes/wiki) 
 
