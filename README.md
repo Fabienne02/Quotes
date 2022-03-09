@@ -11,18 +11,23 @@ Pin jouw favorite quotes of laat je verassen door de random quote generator!
 
 ## Table of contents
   - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
   - [About](#about)
+  - [Gecodeerd met](#gecodeerd-met)
   - [Features](#features)
+  - [Wishlist](#wishlist)
+  - [Installing](#installing)
+  - [Control flow](#control-flow)
   - [Documentation](#documentation)
+  - [Sources](#sources)
   - [Author](#author)
-  - 
 
 ## About
 **Quotes is een webapp waar je geinspireerd kan worden door design quotes!**
 
 Quotes maakt gebruik van een api: https://quote.api.fdnd.nl/v1/quote
 
-# 🦾 Gecodeerd met
+## Gecodeerd met
 Quotes is gecodeerd in HTML, CSS en Javascript, Hierbij maak ik gebruik van een hash router => [routie.js](http://projects.jga.me/routie/) 
 
 ## Features
@@ -31,7 +36,7 @@ Quotes is gecodeerd in HTML, CSS en Javascript, Hierbij maak ik gebruik van een 
   <li>Focus op jouw favoriete quote</li>
 </ul>
 
-## 🌟 Wishlist
+## Wishlist
 <ul>
   <li>Deel jouw favoriete quote op twitter</li>
   <li>Voeg je eigen quotes toe aan de api</li>
@@ -51,7 +56,7 @@ git clone https://github.com/Fabienne02/Quotes.git
 ## Documentation
 Lees hier mijn documentatie per week [wiki](https://github.com/Fabienne02/Quotes/wiki)
 
-## 📑 Sources
+## Sources
 - [Hash router](http://projects.jga.me/routie/)
 - [Code hulp bron](https://developer.mozilla.org/en-US/)
 
