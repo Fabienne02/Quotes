@@ -21,7 +21,6 @@ export function handleroutes() {
           getdata()
           .then(response => {
             renderrandomquote(response)
-            // renderGetData(response)
             hideloading()
           })
         }
