@@ -32,6 +32,9 @@ Clone deze repository naar jouw lokale folder
 git clone https://github.com/Fabienne02/Quotes.git
 ```
 
+## Control flow
+<img src="https://github.com/Fabienne02/Quotes/blob/main/assets/Control flow.jpg">
+
 ## Documentation
 Lees hier mijn documentatie per week [wiki](https://github.com/Fabienne02/Quotes/wiki) 
 
