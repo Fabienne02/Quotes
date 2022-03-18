@@ -1,17 +1,17 @@
 const loader = document.querySelector("#loading");
 
 //show loading state
-export function displayloading() {
+export function displayLoading() {
     loader.classList.add("display");
 }
 
 // hiding loading 
-export function hideloading() {
+export function hideLoading() {
     loader.classList.remove("display");
 }
 
 //error state
-export function showerror(error) {
+export function showError(error) {
       const app = document.getElementById('root')
     
     
@@ -25,4 +25,17 @@ export function showerror(error) {
 
     app.appendChild(errorMessage)
 
+  }
+
+  export function randomQuoteError(error) {
+    console.log("no quote today")
+
+    const errorMessagestatusquote = document.getElementById("errorquoteoftheday")
+    errorMessagestatusquote.textContent = `Looks like there is no quote today, sorry!`
+    // .appendChild(errorMessagestatusquote)
+    errorquoteoftheday.classList.add("display");
+
+    const errorbutton = document.querySelector("button")
+    errorbutton.classList.add("grey")
+    document.querySelector("button").disabled = true;
   }

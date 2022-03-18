@@ -1,7 +1,7 @@
-import { handleroutes } from '../modules/router.js'
+import { handleRoutes } from '../modules/router.js'
 
 
-handleroutes()
+handleRoutes()
 
 
 

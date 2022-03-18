@@ -4,6 +4,11 @@ body {
   background: #faefec;
   padding: none;
   margin: 0px;
+  overflow-y: scroll;
+}
+
+body.hidden {
+  overflow-y: hidden;
 }
 
 a:hover {
@@ -53,6 +58,10 @@ header button {
   margin-top: -80px;
   margin-bottom: 50px;
   margin-left: 50px;
+}
+
+header button.grey {
+  background-color: lightgrey;
 }
 
 .bottom a {

@@ -2,8 +2,8 @@ const app = document.getElementById('root')
 window.location.hash = "Home"
 
 //Render quotes
-function rendergetdata(quotes) {
-    quotes.data.forEach(quote => {
+function renderGetData(response) {
+    response.data.forEach(quote => {
       const figure = document.createElement('figure')
       figure.setAttribute('class', 'figure')
 
@@ -18,19 +18,21 @@ function rendergetdata(quotes) {
       focus.setAttribute("href", `#${quote.name}`);
       focus.textContent = `#`
       let statusquote = false
+
+      const body = document.querySelector("body")
       
       //Focus on quote
       focus.onclick = function highlighted(){
         if ( statusquote == false ) {
         figure.classList.add("highlight")
         figure.id = `${quote.name}`
-        document.querySelector("body").style.overflowY = "hidden"
+        body.classList.add("hidden")
 
         statusquote = true
       } else if ( statusquote == true)  {
         figure.removeAttribute("id")
         figure.classList.remove("highlight")
-        document.querySelector("body").style.overflowY = "scroll"
+        body.classList.remove("hidden")
         statusquote = false
       }
       }
@@ -52,8 +54,8 @@ function rendergetdata(quotes) {
   
 
 
-  export function renderrandomquote(quote) {
-       const quotes = quote.data
+  export function renderRandomQuote(response) {
+       const quotes = response.data
 
 
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
@@ -67,4 +69,4 @@ function rendergetdata(quotes) {
     day.appendChild(cite)
   }
 
-  export { rendergetdata }
+  export { renderGetData }

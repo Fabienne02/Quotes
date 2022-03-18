@@ -1,28 +1,28 @@
 
 import '../script/vendor/routie.js'
-import { getdata } from "./getdata.js";
-import { displayloading, hideloading, showerror } from './states.js';
-import { rendergetdata, renderrandomquote } from "./renderdata.js";
+import { getData } from "./getdata.js";
+import { displayLoading, hideLoading, showError, randomQuoteError } from './states.js';
+import { renderGetData, renderRandomQuote } from "./renderdata.js";
 
 
-export function handleroutes() {
+export function handleRoutes() {
     routie(
       {
       'Home': () => {
-        displayloading()
-        getdata()
+        displayLoading()
+        getData()
         .then(response => {
-          rendergetdata(response)
-          hideloading()
-        }).catch(error => showerror(error))
+          renderGetData(response)
+          hideLoading()
+        }).catch(error => showError(error))
         },
         'random': () => {
-          displayloading()
-          getdata()
+          displayLoading()
+          getData()
           .then(response => {
-            renderrandomquote(response)
-            hideloading()
-          })
+            renderRandomQuote(response)
+            hideLoading()
+          }).catch(error => randomQuoteError(error))
         }
 
 

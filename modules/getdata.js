@@ -1,5 +1,5 @@
 //fetch from api 
-export async function getdata(){
+export async function getData(){
   const url = 'https://quote.api.fdnd.nl/v1/quote'
   const data = await fetch(url)
   const response = await data.json()
